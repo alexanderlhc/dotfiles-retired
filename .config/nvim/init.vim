@@ -1,7 +1,6 @@
 """ Mappings
 let mapleader=" "
 
-
 """ Settings
 " scroll when reaching last 3 lines
 set scrolloff=3
@@ -15,8 +14,11 @@ set virtualedit=block
 filetype indent plugin on
 " Enables syntax highlighting
 syntax on
+" 2 spaces per tab
+set tabstop=2
 
 """ Visuals
+colorscheme jane
 " highlight current line
 set cursorline
 " fold based on indentation
@@ -25,6 +27,7 @@ set foldmethod=indent
 set foldlevelstart=132
 " unless told otherwise end of buffer (bottom of file) ~ char is removed
 set fillchars+=eob:\ 
+
 " show whitespace
 set list
 " tab character expands as: ▷┅┅┅
@@ -35,7 +38,7 @@ set listchars+=precedes:«
 " trailing spaces
 set listchars+=trail:•
 " non-breakable space character (don't break: 100⦸km)
-set listchars=nbsp:⦸
-" show line numbers releative to current line
-set relativenumber
+set listchars+=nbsp:⦸
 
+" show line number and releative to current line
+set number relativenumber
