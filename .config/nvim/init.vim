@@ -16,3 +16,5 @@ syntax on
 """ Visuals
 " highlight current line
 set cursorline
+" fold based on indentation
+set foldmethod=indent
