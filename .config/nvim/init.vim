@@ -1,0 +1,2 @@
+""" Mappings
+let mapleader=" "
