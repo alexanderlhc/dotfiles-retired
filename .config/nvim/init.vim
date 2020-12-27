@@ -33,3 +33,5 @@ set listchars+=precedes:«
 set listchars+=trail:•
 " non-breakable space character (don't break: 100⦸km)
 set listchars=nbsp:⦸
+" show line numbers releative to current line
+set relativenumber
