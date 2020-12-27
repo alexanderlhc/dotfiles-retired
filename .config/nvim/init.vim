@@ -12,3 +12,7 @@ let mapleader=" "
 filetype indent plugin on
 " Enables syntax highlighting
 syntax on
+
+""" Visuals
+" highlight current line
+set cursorline
