@@ -5,6 +5,8 @@ let mapleader=" "
 """ Settings
 " scroll when reaching last 3 lines
 set scrolloff=3
+" cursor can move outside text in virtual block mode
+set virtualedit=block
 " Customization for known filetypes
 "
 " Reads filetype:
