@@ -1,6 +1,9 @@
 """ Mappings
 let mapleader=" "
 
+" Load plugins
+runtime plugins.vim
+
 """ Settings
 " scroll when reaching last 3 lines
 set scrolloff=3
