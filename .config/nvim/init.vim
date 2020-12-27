@@ -3,7 +3,8 @@ let mapleader=" "
 
 
 """ Settings
-
+" scroll when reaching last 3 lines
+set scrolloff=3
 " Customization for known filetypes
 "
 " Reads filetype:
@@ -35,3 +36,4 @@ set listchars+=trail:•
 set listchars=nbsp:⦸
 " show line numbers releative to current line
 set relativenumber
+
