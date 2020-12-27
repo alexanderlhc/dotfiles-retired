@@ -18,3 +18,7 @@ syntax on
 set cursorline
 " fold based on indentation
 set foldmethod=indent
+" folding is unfolded unless told otherwise
+set foldlevelstart=132
+" end of buffer (bottom of file) ~ char is removed
+set fillchars+=eob:\ 
