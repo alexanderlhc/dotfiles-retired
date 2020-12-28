@@ -17,8 +17,12 @@ set virtualedit=block
 filetype indent plugin on
 " Enables syntax highlighting
 syntax on
+" use space as tab
+set expandtab
 " 2 spaces per tab
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 " hide buffer when abandoning
 set hidden
 
