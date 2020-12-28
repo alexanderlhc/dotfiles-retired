@@ -19,6 +19,8 @@ filetype indent plugin on
 syntax on
 " 2 spaces per tab
 set tabstop=2
+" hide buffer when abandoning
+set hidden
 
 """ Visuals
 colorscheme jane
