@@ -35,7 +35,7 @@ set foldmethod=indent
 " folding is unfolded unless told otherwise
 set foldlevelstart=132
 " unless told otherwise end of buffer (bottom of file) ~ char is removed
-set fillchars+=eob:\ 
+set fillchars+=eob:\
 
 " show whitespace
 set list

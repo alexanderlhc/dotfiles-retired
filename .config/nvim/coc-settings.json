@@ -1,3 +1,15 @@
 {
-								"latex.build.args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "-pv", "-output-directory=out"]
+  "latex.build.args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "-pv", "-output-directory=out"],
+
+  // Diagnostic Languageserver
+  "diagnostic.enable": true,
+  "diagnostic-languageserver.trace.server": "verbose",
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "H",
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint",
+    "sh": "shellcheck"
+  }
 }
