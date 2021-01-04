@@ -25,6 +25,9 @@ set softtabstop=2
 set shiftwidth=2
 " hide buffer when abandoning
 set hidden
+" defaults to English dictionary
+set spell
+set spelllang=en_us
 
 """ Visuals
 set background=light
