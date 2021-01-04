@@ -1,4 +1,12 @@
 """"""
+" Vanilla
+
+" If jumps is greater than 5, set mark to allow for
+" CTRL-o jump back
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : '') . 'j'
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : '') . 'k'
+
+""""""
 " Function Keys F1-F12
 
 " View action for code under cursor
