@@ -1,5 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Theme
+Plug 'rakr/vim-one'
 " Git plugin
 Plug 'tpope/vim-fugitive'
 " Fuzzy finder

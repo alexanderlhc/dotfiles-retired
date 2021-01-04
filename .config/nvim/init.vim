@@ -27,7 +27,10 @@ set shiftwidth=2
 set hidden
 
 """ Visuals
-colorscheme jane
+set background=light
+" colorscheme "one" has italics for comments
+let g:one_allow_italics = 1
+colorscheme one
 " highlight current line
 set cursorline
 " fold based on indentation
