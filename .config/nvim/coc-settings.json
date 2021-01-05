@@ -1,4 +1,8 @@
 {
+  // UltiSnippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips/",
+
+  // File Specifics
   "latex.build.args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "-pv", "-output-directory=out"],
 
   // Diagnostic Languageserver

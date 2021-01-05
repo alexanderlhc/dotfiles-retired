@@ -2,15 +2,13 @@
 " Vanilla
 
 " Tab triggers completion on current word
-" if options are not visible
-"   * then show dropdown
-"   else
-"   * cycle through
-"   if visible cancel on backspace
+" expands, jump to next trigger location
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
