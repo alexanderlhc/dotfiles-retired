@@ -17,5 +17,6 @@ let g:coc_global_extensions = [
   \ 'coc-texlab',
   \ 'coc-tsserver',
   \ 'coc-diagnostic',
-  \ 'coc-git'
+  \ 'coc-git',
+  \ 'coc-snippets'
   \]
