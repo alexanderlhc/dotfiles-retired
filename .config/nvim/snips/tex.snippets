@@ -3,3 +3,12 @@ snippet "\\?b(egin)?" "begin and end" br
 	${0:${VISUAL}}
 \end{$1}
 endsnippet
+
+snippet "\\?fig(ure)?" "figure inside environment" br
+\begin{figure}
+	\centering
+	\caption{$1}
+	\includegraphics[width=$3\linewidth]{$2}
+\end{figure}
+${0:${VISUAL}}
+endsnippet
