@@ -12,3 +12,14 @@ snippet "\\?fig(ure)?" "figure inside environment" br
 \end{figure}
 ${0:${VISUAL}}
 endsnippet
+
+snippet "\\?table" "table environment centered" br
+\begin{table}
+\centering
+\caption{$1}
+\begin{tabular}{ $2 }
+	$3
+\end{tabular}
+\end{table}
+${0:${VISUAL}}
+endsnippet
