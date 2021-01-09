@@ -2,12 +2,18 @@
 " Vanilla
 
 " Tab triggers completion on current word
-" expands, jump to next trigger location
+" if options are not visible
+"   * then show dropdown
+"   else
+"   * cycle through
+"   if visible cancel on backspace
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
+" Jump to next placeholder (c-j default in coc.nvim)
+let g:coc_snippet_next = '<c-j>'
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
