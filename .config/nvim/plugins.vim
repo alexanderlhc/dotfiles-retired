@@ -8,6 +8,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 " IntelliSense
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+" Easier movement through (default 's' mapping)
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
