@@ -12,8 +12,8 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
-" Jump to next placeholder (c-j default in coc.nvim)
-let g:coc_snippet_next = '<c-j>'
+" Expand snippet
+imap <C-l> <Plug>(coc-snippets-expand)
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
