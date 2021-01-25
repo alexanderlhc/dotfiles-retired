@@ -2,10 +2,10 @@ snippet html "HTML Boilerplate" b
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>$1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>$1</title>
 </head>
 <body>
 	$2
@@ -19,6 +19,8 @@ snippet div "div with optional id and class" w
 </div>
 endsnippet
 
+
+# Inline
 snippet id
 id="$1"$2
 endsnippet
@@ -27,8 +29,30 @@ snippet idn
 id="$1" name="${2:$1}"
 endsnippet
 
+
+# Small tags
+
 snippet "h([1-6])" "Heading 1-6" r
 `!p number = int(match.group(0)[1])`
 <h`!p snip.rv = number`>$1</h`!p snip.rv = number`>$0
 endsnippet
 
+snippet span "Span tag" w
+<span>$1</span>$0
+endsnippet
+
+snippet input "Input field with optional id" w
+<input type="${1:text/hidden/search/url/password}" value="$2" name="$3"${4: id="${5:$3}"}/>$7
+endsnippet
+
+snippet button "Button" w
+<button type="${1:button/reset/submit}" name="$2" ${3: id="${4:$2}"}>${5:$2}</button>$0
+endsnippet
+
+snippet script "Script with src or none" w
+<script type="text/javascript" ${1:src="$2"}>$3</script>$0
+endsnippet
+
+snippet css "CSS external file link" w
+<link rel="stylesheet" type="text/css" href="$1">$2
+endsnippet
