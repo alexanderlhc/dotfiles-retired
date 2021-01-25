@@ -54,5 +54,5 @@ set listchars+=trail:•
 " non-breakable space character (don't break: 100⦸km)
 set listchars+=nbsp:⦸
 
-" show line number and releative to current line
-set number relativenumber
+" show line number
+set number
