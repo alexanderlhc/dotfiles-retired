@@ -16,7 +16,7 @@ nmap <silent> gD :call CocAction('jumpDefinition', 'tab drop')<cr>
 "nnoremap <silent><nowait> <F2> :<C-u>CocAction<cr>
 
 " Rename under cursor
-nmap <leader><F2> <Plug>(coc-rename)
+nmap <F2> <Plug>(coc-rename)
 
 
 """"""
