@@ -4,6 +4,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'rakr/vim-one'
 " Git plugin
 Plug 'tpope/vim-fugitive'
+" Surround
+Plug 'tpope/vim-surround'
 " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 " IntelliSense
