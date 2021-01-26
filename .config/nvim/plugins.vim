@@ -6,6 +6,8 @@ Plug 'rakr/vim-one'
 Plug 'tpope/vim-fugitive'
 " Surround
 Plug 'tpope/vim-surround'
+" Code Commenting Faster
+Plug 'tpope/vim-commentary'
 " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 " IntelliSense
