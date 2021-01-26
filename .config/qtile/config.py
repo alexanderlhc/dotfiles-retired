@@ -108,7 +108,7 @@ bar_default_widgets = [
 
 screens = [
     Screen( bottom=bar.Bar(bar_default_widgets, 24,),),
-    Screen( bottom=bar.Bar(bar_default_widgets, 24,),),
+    Screen( bottom=bar.Bar([widget.CurrentLayout(), widget.GroupBox()], 30,),),
 ]
 
 # Drag floating layouts.
