@@ -1,6 +1,9 @@
+import os
+import subprocess
+
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -98,7 +101,7 @@ bar_default_widgets = [
                 },
             name_transform=lambda name: name.upper(),
             ),
-        widget.TextBox("default config", name="default"),
+        widget.Volume(),
         widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
         widget.Systray(),
         widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
@@ -155,3 +158,14 @@ focus_on_window_activation = "smart"
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([home])
+#home = os.path.expanduser('~/autostart.sh')
+
+#@hook.subscribe.startup_once
+#def autostart():
+#    home = os.path.expanduser('~')
+#    subprocess.Popen([home + '/.config/qtile/autostart.sh'])
