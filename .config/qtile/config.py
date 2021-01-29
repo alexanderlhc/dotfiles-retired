@@ -29,6 +29,14 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.shuffle_up(),
         desc="Move window up in current stack "),
 
+    Key([mod], "p", lazy.spawn('passmenu -fn "Inconsolata Regular"-15'),
+        desc="Launches password manager"),
+    Key([mod], "c", lazy.spawn('rofi -modi "clipboard:greenclip print" -show clipboard -run-command {cmd}'),
+        desc="Launches clipboard manager"),
+    Key([mod], "r", lazy.spawn('rofi -show combi -modi combi -combi-modi window,run,ss:'),
+        desc="Launches application manager"),
+
+
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
@@ -51,8 +59,8 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(),
+    #     desc="Spawn a command using a prompt widget"),
 ]
 
 groups = [Group(i) for i in "123456"]
