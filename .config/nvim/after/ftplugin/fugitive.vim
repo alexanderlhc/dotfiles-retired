@@ -1,1 +1,1 @@
-nnoremap <C-p> :Git push<CR>
+nnoremap <leader>p :Git push<CR>
