@@ -18,6 +18,8 @@ keys = [
     Key([mod], "j", lazy.layout.up(),
         desc="Move focus up in stack pane"),
 
+    Key([mod], "t", lazy.window.toggle_floating(),
+        desc="Move focus up in stack pane"),
     Key([mod], "f", lazy.window.toggle_fullscreen(),
         desc="Move focus up in stack pane"),
 
