@@ -36,6 +36,10 @@ keys = [
     Key([mod], "r", lazy.spawn('rofi -show combi -modi combi -combi-modi window,run,ss:'),
         desc="Launches application manager"),
 
+    Key(['control'], "Print", lazy.spawn('flameshot gui'),
+        desc="Takes a screenshot "),
+
+
 
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
@@ -115,7 +119,6 @@ bar_default_widgets = [
             name_transform=lambda name: name.upper(),
             ),
         widget.Volume(),
-        widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
         widget.Systray(),
         widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
         widget.QuickExit(),
