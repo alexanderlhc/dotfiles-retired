@@ -24,5 +24,6 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-diagnostic',
   \ 'coc-git',
-  \ 'coc-snippets'
+  \ 'coc-snippets',
+  \ 'coc-omnisharp'
   \]
