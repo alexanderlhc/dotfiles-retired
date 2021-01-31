@@ -102,6 +102,7 @@ bar_default_widgets = [
             name_transform=lambda name: name.upper(),
             ),
         widget.Volume(),
+        widget.Battery(),
         widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
         widget.Systray(),
         widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
