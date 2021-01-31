@@ -5,3 +5,6 @@ autocmd BufWritePre,FileWritePre * %s/\s\+$//e
 
 " Centering screen when entering insert mode
 autocmd InsertEnter * norm zz
+
+" Handlebars correct filetype
+autocmd BufRead,BufNewFile *.hbs set filetype=hbs.html
