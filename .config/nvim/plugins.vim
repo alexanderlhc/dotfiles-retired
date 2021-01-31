@@ -22,8 +22,10 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-texlab',
   \ 'coc-tsserver',
+  \ 'coc-css',
   \ 'coc-diagnostic',
   \ 'coc-git',
   \ 'coc-snippets',
-  \ 'coc-omnisharp'
+  \ 'coc-omnisharp',
+  \ 'coc-pyright'
   \]
