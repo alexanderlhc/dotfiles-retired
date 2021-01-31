@@ -18,11 +18,28 @@ keys = [
     Key([mod], "j", lazy.layout.up(),
         desc="Move focus up in stack pane"),
 
+    Key([mod], "t", lazy.window.toggle_floating(),
+        desc="Move focus up in stack pane"),
+    Key([mod], "f", lazy.window.toggle_fullscreen(),
+        desc="Move focus up in stack pane"),
+
     # Move windows up or down in current stack
     Key([mod, "control"], "k", lazy.layout.shuffle_down(),
         desc="Move window down in current stack "),
     Key([mod, "control"], "j", lazy.layout.shuffle_up(),
         desc="Move window up in current stack "),
+
+    Key([mod], "p", lazy.spawn('passmenu -fn "Inconsolata Regular"-15'),
+        desc="Launches password manager"),
+    Key([mod], "c", lazy.spawn('rofi -modi "clipboard:greenclip print" -show clipboard -run-command {cmd}'),
+        desc="Launches clipboard manager"),
+    Key([mod], "r", lazy.spawn('rofi -show combi -modi combi -combi-modi window,run,ss:'),
+        desc="Launches application manager"),
+
+    Key(['control'], "Print", lazy.spawn('flameshot gui'),
+        desc="Takes a screenshot "),
+
+
 
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
@@ -46,8 +63,8 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(),
+    #     desc="Spawn a command using a prompt widget"),
 ]
 
 groups = [Group(i) for i in "123456"]
@@ -101,9 +118,10 @@ bar_default_widgets = [
                 },
             name_transform=lambda name: name.upper(),
             ),
+        widget.TextBox("| Volume: ", foreground="#d75f5f"),
         widget.Volume(),
+        widget.TextBox("| Battery: ", foreground="#d75f5f"),
         widget.Battery(),
-        widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
         widget.Systray(),
         widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
         widget.QuickExit(),
