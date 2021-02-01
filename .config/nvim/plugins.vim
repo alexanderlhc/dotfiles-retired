@@ -14,6 +14,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 " Easier movement through (default 's' mapping)
 Plug 'justinmk/vim-sneak'
+" Assistance with build jobs and such
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
