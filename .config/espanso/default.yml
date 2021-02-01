@@ -1,0 +1,15 @@
+global_vars:
+  - name: "date"
+    type: date
+    params:
+      format: "%Y%m%d"
+
+matches:
+  - trigger: ":day"
+    replace: "{{date}}"
+  - trigger: ":ecs"
+    replace: "{{date}}-CSharp-"
+  - trigger: ":emo"
+    replace: "{{date}}-Mobile-"
+  - trigger: ":emi"
+    replace: "{{date}}-MicroS-"
