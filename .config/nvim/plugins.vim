@@ -29,5 +29,6 @@ let g:coc_global_extensions = [
   \ 'coc-git',
   \ 'coc-snippets',
   \ 'coc-omnisharp',
-  \ 'coc-pyright'
+  \ 'coc-pyright',
+  \ 'coc-java'
   \]
