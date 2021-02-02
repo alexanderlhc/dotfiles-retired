@@ -62,7 +62,7 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
+    #Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
     # Key([mod], "r", lazy.spawncmd(),
     #     desc="Spawn a command using a prompt widget"),
 ]
@@ -124,8 +124,7 @@ bar_default_widgets = [
         widget.Battery(),
         widget.Systray(),
         widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-        widget.QuickExit(),
-
+        #widget.QuickExit(),
         ]
 
 screens = [
