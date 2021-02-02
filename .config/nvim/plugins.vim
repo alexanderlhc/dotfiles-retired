@@ -30,5 +30,6 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-omnisharp',
   \ 'coc-pyright',
-  \ 'coc-java'
+  \ 'coc-java',
+  \ 'coc-flutter'
   \]
