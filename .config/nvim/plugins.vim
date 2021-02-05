@@ -16,6 +16,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 Plug 'justinmk/vim-sneak'
 " Assistance with build jobs and such
 Plug 'tpope/vim-dispatch'
+" Dart/Flutter support
+Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
