@@ -7,9 +7,13 @@ global_vars:
 matches:
   - trigger: ":day"
     replace: "{{date}}"
+    force_clipboard: true
   - trigger: ":ecs"
     replace: "{{date}}-CSharp-"
+    force_clipboard: true
   - trigger: ":emo"
     replace: "{{date}}-Mobile-"
+    force_clipboard: true
   - trigger: ":emi"
     replace: "{{date}}-MicroS-"
+    force_clipboard: true
