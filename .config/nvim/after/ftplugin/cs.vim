@@ -1,6 +1,3 @@
-" Compiles current file
-nmap <F4> :! csc %<CR>
-" Runs current file with mono
-nmap <F5> :! mono %:r.exe<CR>
-nmap <F6> :Dispatch mono %:r.exe<CR>
-nmap <F7> :! mono %:r.exe <
+" Run project
+nmap <F5> :!dotnet run<CR>
+nmap <F6> :!dotnet run <
