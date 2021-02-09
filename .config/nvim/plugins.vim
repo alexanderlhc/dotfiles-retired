@@ -18,6 +18,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-dispatch'
 " Dart/Flutter support
 Plug 'dart-lang/dart-vim-plugin'
+" Show line indents
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
