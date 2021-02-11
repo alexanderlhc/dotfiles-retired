@@ -5,6 +5,6 @@ nnoremap <Leader>q :quit<CR>
 nnoremap <Leader>qq :quit!<CR>
 
 " File Management
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>fg :GFiles<CR>
-nnoremap <Leader>fe :Explore<CR>
+nnoremap <A-f> :Files<CR>
+nnoremap <A-f>g :GFiles<CR>
+nnoremap <A-f>e :Explore<CR>
