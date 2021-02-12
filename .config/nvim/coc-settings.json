@@ -1,4 +1,7 @@
 {
+  // don't select first item on completion
+  "suggest.noselect": false,
+
   // UltiSnippets
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips/",
 
