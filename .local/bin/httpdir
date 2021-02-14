@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+set -o errexit		# Exit script on fail
+set -o nounset		# Fails if unset var
+
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
+port=8123
+
+usage() {
+  cat <<EOF
+Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-p] [-c] directory
+
+Shares a directory and exposes it to port (8123 default) HTTP.
+Mainly used for quickly sending large files between LAN devices.
+Used with -c and added to pacman hosts, can be used as pacman mirror.
+
+Available options:
+
+-h, --help   )      Print this help and exit
+-v, --verbose)      Enables debug mode
+-p, --port   )      Port (only if not using default: 8123)
+-c, --cache  )      Shares pacman cache directory (/var/cache/pacman/pkg)
+
+EOF
+  exit
+}
+
+parse_params() {
+  # default values of variables set from params
+  flag=0
+  directory=''
+
+  while :; do
+    case "${1-}" in
+    -h | --help) usage ;;
+    -v | --verbose) set -x ;;
+    -p | --port) port=$1;;
+    -c | --cache) directory="/var/cache/pacman/pkg";;
+    -?*) echo "Unknown option: $1"
+         return 0;;
+    *) break ;;
+    esac
+    shift
+  done
+
+  args=("$@")
+
+  if  [[ -z "${directory-}" ]] && [[ $# -eq 0 ]]
+  then
+    echo "Arguments must contain -c or directory"
+    return 0
+  fi
+
+  [[ -z "${directory}" ]] && directory=$1
+
+  return 0
+}
+
+run() {
+  sudo -u http darkhttpd $directory --no-server-id --port $port
+}
+
+parse_params "$@"
+
+run
