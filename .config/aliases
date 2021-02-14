@@ -1,0 +1,20 @@
+# colors
+alias ls='ls --color=auto'
+alias l='ls'
+alias la='ls -la'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias mkdir='mkdir -p'
+
+# Programs
+alias vim='nvim'
+alias v='vim'
+alias g='git'
+alias r='ranger'
+
+# shortcuts 2nd rank
+alias tde='trans da:en'
+alias ted='trans en:da'
+
+# dotfile edit
+alias cvim="$EDITOR ~/.config/nvim/init.vim"
