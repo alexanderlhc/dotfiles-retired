@@ -8,6 +8,9 @@ from libqtile.config import Click, Drag, Group, Key, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+# Refactorized config files
+from bars import main_bar, minimal_bar
+
 mod = "mod4"
 terminal = guess_terminal()
 
@@ -107,29 +110,9 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-bar_default_widgets = [
-        widget.CurrentLayout(),
-        widget.GroupBox(),
-        widget.Prompt(),
-        widget.WindowName(),
-        widget.Chord(
-            chords_colors={
-                'launch': ("#ff0000", "#ffffff"),
-                },
-            name_transform=lambda name: name.upper(),
-            ),
-        widget.TextBox("| Volume: ", foreground="#d75f5f"),
-        widget.Volume(),
-        widget.TextBox("| Battery: ", foreground="#d75f5f"),
-        widget.Battery(),
-        widget.Systray(),
-        widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-        #widget.QuickExit(),
-        ]
-
 screens = [
-    Screen( bottom=bar.Bar(bar_default_widgets, 24,),),
-    Screen( bottom=bar.Bar([widget.CurrentLayout(), widget.GroupBox()], 30,),),
+    Screen( bottom=main_bar ),
+    Screen( bottom=minimal_bar )
 ]
 
 # Drag floating layouts.
