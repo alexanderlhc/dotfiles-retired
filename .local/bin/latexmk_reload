@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+set -o errexit		# Exit script on fail
+set -o nounset		# Fails if unset var
+
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
+
+usage() {
+  cat <<EOF
+Usage: $(basename "${BASH_SOURCE[0]}") [-h] source.tex
+
+Generates and continuously reloads a PDF from source.
+
+Available options:
+
+-h, --help   )      Print this help and exit
+-v, --verbose)      Enables debug mode
+
+EOF
+  exit
+}
+
+parse_params() {
+  # default values of variables set from params
+  flag=0
+  param=''
+
+  while :; do
+    case "${1-}" in
+    -h | --help) usage ;;
+    -v | --verbose) set -x ;;
+    -?*) die "Unknown option: $1" ;;
+    *) break ;;
+    esac
+    shift
+  done
+
+  args=("$@")
+
+  return 0
+}
+
+run() {
+  file="${args[-1]}"
+  latexmk -quiet -bibtex -pvc -f -pdf -pdflatex=\"pdflatex -synctex=1 -interaction=nonstopmode\ $file
+}
+
+parse_params "$@"
+
+run
