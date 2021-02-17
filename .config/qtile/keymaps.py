@@ -34,7 +34,8 @@ keys = [
         desc="Launches clipboard manager"),
     Key([mod], "r", lazy.spawn('rofi -show combi -modi combi -combi-modi window,run,ss:'),
         desc="Launches application manager"),
-
+    Key([mod], "e", lazy.spawn('sh /home/alexander/.local/bin/emojis'),
+        desc="Lanuches an emoji picker"),
     Key(['control'], "Print", lazy.spawn('flameshot gui'),
         desc="Takes a screenshot "),
 
