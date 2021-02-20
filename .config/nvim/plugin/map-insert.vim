@@ -16,6 +16,9 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+" Trigger completion puml
+inoremap <silent><expr> <c-space> coc#refresh()
+
 " Use C-j+k to navigate the puml up/down
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
