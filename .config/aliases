@@ -21,3 +21,6 @@ alias cvim="$EDITOR ~/.config/nvim/init.vim"
 
 alias rsync_cp="rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1"
 alias rsync_mv="rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files"
+
+# cd to exited dir with Ranger
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
