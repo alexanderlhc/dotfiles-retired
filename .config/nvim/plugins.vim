@@ -20,6 +20,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'dart-lang/dart-vim-plugin'
 " Show line indents
 Plug 'Yggdroot/indentLine'
+" React highlighting
+Plug 'MaxMEllon/vim-jsx-pretty'
 
 call plug#end()
 
