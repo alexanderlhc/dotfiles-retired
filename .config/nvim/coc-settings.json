@@ -8,6 +8,9 @@
   // File Specifics
   "latex.build.args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "-pv", "-output-directory=out"],
 
+  // Format on save
+  "coc.preferences.formatOnSaveFiletypes": ["markdown"],
+
   // Diagnostic Languageserver
   "diagnostic.enable": true,
   "diagnostic-languageserver.trace.server": "verbose",
