@@ -32,7 +32,7 @@ keys = [
         desc="Launches password manager"),
     Key([mod], "c", lazy.spawn('rofi -modi "clipboard:greenclip print" -show clipboard -run-command {cmd}'),
         desc="Launches clipboard manager"),
-    Key([mod], "r", lazy.spawn('rofi -show combi -modi combi -combi-modi window,run,ss:'),
+    Key([mod], "r", lazy.spawn('rofi -show drun'),
         desc="Launches application manager"),
     Key([mod], "e", lazy.spawn('sh /home/alexander/.local/bin/emojis'),
         desc="Lanuches an emoji picker"),
