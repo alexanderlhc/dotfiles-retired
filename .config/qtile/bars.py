@@ -1,4 +1,8 @@
+from typing import Text
 from libqtile import bar, widget
+
+import subprocess
+hasBattery = get_batterystatus = subprocess.check_output(['acpi', '-i']).decode('utf-8').strip() != ""
 
 main_bar = bar.Bar([
         widget.CurrentLayout(),
@@ -13,12 +17,14 @@ main_bar = bar.Bar([
             ),
         widget.TextBox("| Volume: ", foreground="#d75f5f"),
         widget.Volume(),
-        widget.TextBox("| Battery: ", foreground="#d75f5f"),
-        widget.Battery(),
+        widget.TextBox("|", foreground="#d75f5f"),
+        #hasBattery ? widget.TextBox("| Battery: ", foreground="#d75f5f"), : null,
+        #hasBattery ? widget.Battery(), : null,
         widget.Systray(),
         widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
         #widget.QuickExit(),
     ], 24)
+
 
 minimal_bar = bar.Bar([
     widget.CurrentLayout(),
