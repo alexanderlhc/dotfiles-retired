@@ -6,31 +6,8 @@
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : '') . 'j'
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : '') . 'k'
 
-nmap <silent> gd :call CocAction('jumpDefinition', 'edit')<cr>
-nmap <silent> gD :call CocAction('jumpDefinition', 'tab drop')<cr>
-
 """"""
 " Function Keys F1-F12
-nnoremap <silent> <F1> :call <SID>show_documentation()<CR>
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-
-" View action for code under cursor
-"nnoremap <silent><nowait> <F2> :<C-u>CocAction<cr>
-
-" Rename under cursor
-nmap <F2> <Plug>(coc-rename)
-
 
 """"""
 " ALT
@@ -38,4 +15,3 @@ nmap <F2> <Plug>(coc-rename)
 " Moves lines n-length in either up (k) or down (j) direction
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
-

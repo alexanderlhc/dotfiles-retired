@@ -9,7 +9,3 @@ nnoremap <A-f> :Files<CR>
 nnoremap <A-f>g :GFiles<CR>
 nnoremap <A-f>e :Explore<CR>
 
-" Coc
-nmap <silent><leader>cc  :CocCommand<CR>
-nmap <silent><leader>ca  <Plug>(coc-codeaction)
-nmap <silent><leader>cl <Plug>(coc-codelens-action)

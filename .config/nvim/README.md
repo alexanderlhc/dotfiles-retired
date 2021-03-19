@@ -2,8 +2,6 @@
 
 ## Ideas for future
 
-* Map following: `:call CocAction('diagnosticToggle')`
-* For coc-diagnostic see [following linter](https://github.com/standard/standard)
 * Consider using F9-12 to: runtest, dispatch run (:Dispatch ...), run, compile
 
 

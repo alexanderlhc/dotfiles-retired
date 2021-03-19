@@ -10,8 +10,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 " Fuzzy finder
 Plug 'junegunn/fzf.vim'
-" IntelliSense
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 " Easier movement through (default 's' mapping)
 Plug 'justinmk/vim-sneak'
 " Assistance with build jobs and such
@@ -24,19 +22,3 @@ Plug 'Yggdroot/indentLine'
 Plug 'MaxMEllon/vim-jsx-pretty'
 
 call plug#end()
-
-
-let g:coc_global_extensions = [
-      \ 'coc-vimlsp',
-      \ 'coc-texlab',
-      \ 'coc-tsserver',
-      \ 'coc-css',
-      \ 'coc-diagnostic',
-      \ 'coc-git',
-      \ 'coc-snippets',
-      \ 'coc-omnisharp',
-      \ 'coc-pyright',
-      \ 'coc-java',
-      \ 'coc-flutter',
-      \ 'coc-prettier',
-      \]
