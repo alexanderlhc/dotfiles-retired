@@ -58,4 +58,5 @@ set number
 " Load LSP Config
 lua << EOF
 require('lsp-plugin')
+require('compe-plugin')
 EOF
