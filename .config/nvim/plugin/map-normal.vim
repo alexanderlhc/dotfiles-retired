@@ -1,5 +1,6 @@
 """"""
 " Vanilla
+nnoremap <leader>e :tabedit<space>
 
 " If jumps is greater than 5, set mark to allow for
 " CTRL-o jump back

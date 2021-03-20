@@ -17,8 +17,14 @@ Plug 'tpope/vim-dispatch'
 " Dart/Flutter support
 Plug 'dart-lang/dart-vim-plugin'
 " Show line indents
-Plug 'Yggdroot/indentLine'
+"TODO: remove if flutter-tools widget guides is functional Plug 'Yggdroot/indentLine'
 " React highlighting
 Plug 'MaxMEllon/vim-jsx-pretty'
+" Common configuration for LSP
+Plug 'neovim/nvim-lspconfig'
+" Autocomplete goodness
+Plug 'hrsh7th/nvim-compe'
+" Flutter Tools
+Plug 'akinsho/flutter-tools.nvim'
 
 call plug#end()
