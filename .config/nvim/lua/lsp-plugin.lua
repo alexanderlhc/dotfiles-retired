@@ -3,6 +3,7 @@ local nvim_lsp = require('lspconfig') -- for readability
 local on_attach = function(client, bufnr)
   -- helpers
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  --local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
   -- mappings (should be moved)
   local opts = { noremap=true, silent=true }
@@ -35,10 +36,22 @@ local on_attach = function(client, bufnr)
   end
 end
 
-
 local servers = { "tsserver", "pyright" }
 
 -- setup each server and map on_attach bindings
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
+
+-- Installed as vim plugin
+require("flutter-tools").setup{
+  widget_guides = {
+    enabled = false,
+  },
+  dev_log = {
+    open_cmd = "tabedit"
+  },
+  lsp = {
+    on_attach = on_attach
+  }
+}
