@@ -2,13 +2,10 @@
 
 ## Ideas for future
 
-* Consider using F9-12 to: runtest, dispatch run (:Dispatch ...), run, compile
-
-
 ## Learn
 
 * Registers
-* Convention for jumping to definition `K` vs `gd`.
+* Learn debugger: https://github.com/mfussenegger/nvim-dap
 * Remember mappings:
   * `gv` = reselect last visual.
   * `<C-u>` = undo in insert.
