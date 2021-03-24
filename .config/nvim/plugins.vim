@@ -26,5 +26,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 " Flutter Tools
 Plug 'akinsho/flutter-tools.nvim'
+" Snippets
+Plug 'hrsh7th/vim-vsnip'
 
 call plug#end()

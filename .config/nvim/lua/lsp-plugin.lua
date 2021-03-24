@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local servers = { "tsserver", "pyright" }
+local servers = { "tsserver", "pyright", "texlab" }
 
 -- setup each server and map on_attach bindings
 for _, lsp in ipairs(servers) do
