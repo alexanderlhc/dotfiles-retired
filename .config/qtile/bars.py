@@ -2,11 +2,12 @@ from typing import Text
 from libqtile import bar, widget
 
 import subprocess
-hasBattery = get_batterystatus = subprocess.check_output(['acpi', '-i']).decode('utf-8').strip() != ""
+batteryDetails = subprocess.check_output(['acpi', '-i']).decode('utf-8').strip()
+hasBattery =  len(batteryDetails) != 0
 
 # TODO: find cleaner way
-batteryText = widget.TextBox("| Battery: ", foreground="#d75f5f") if hasBattery else null
-batteryWidget = widget.Battery() if hasBattery else null
+batteryText = widget.TextBox("| Battery: ", foreground="#d75f5f") if hasBattery else widget.TextBox("")
+batteryWidget = widget.Battery() if hasBattery else widget.TextBox("")
 
 main_bar = bar.Bar([
         widget.CurrentLayout(),
