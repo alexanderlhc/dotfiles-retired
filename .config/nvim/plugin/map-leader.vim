@@ -9,3 +9,5 @@ nnoremap <A-f> :Files<CR>
 nnoremap <A-f>g :GFiles<CR>
 nnoremap <A-f>e :Explore<CR>
 
+" Open Git in new tab
+nnoremap <Leader>g :Gtabedit :<CR>
