@@ -36,6 +36,8 @@ export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
 export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android/
 export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/
 export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
+# flutter want to know chrome
+export CHROME_EXECUTABLE=/usr/bin/chromium
 
 # App variables
 export EDITOR="nvim"
