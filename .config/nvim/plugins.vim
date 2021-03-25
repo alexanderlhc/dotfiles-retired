@@ -28,5 +28,8 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'akinsho/flutter-tools.nvim'
 " Snippets
 Plug 'hrsh7th/vim-vsnip'
+" https://github.com/lewis6991/gitsigns.nvim
+" Code Actions Light bulb
+Plug 'kosayoda/nvim-lightbulb'
 
 call plug#end()
