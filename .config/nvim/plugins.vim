@@ -31,5 +31,8 @@ Plug 'hrsh7th/vim-vsnip'
 " https://github.com/lewis6991/gitsigns.nvim
 " Code Actions Light bulb
 Plug 'kosayoda/nvim-lightbulb'
+" SQL Languageserver
+" requires: 'go get github.com/lighttiger2505/sqls'
+Plug 'nanotee/sqls.nvim'
 
 call plug#end()
