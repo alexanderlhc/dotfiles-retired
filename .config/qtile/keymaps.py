@@ -2,6 +2,7 @@ from libqtile.config import Click, Drag, Key
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+from functions import float_to_front
 from groups import groups
 
 # should probably not be here
@@ -39,8 +40,6 @@ keys = [
     Key(['control'], "Print", lazy.spawn('flameshot gui'),
         desc="Takes a screenshot "),
 
-
-
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
@@ -48,6 +47,9 @@ keys = [
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate(),
         desc="Swap panes of split stack"),
+
+    Key([mod, "shift"], "f", float_to_front,
+        desc="Floating windows to front"),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed

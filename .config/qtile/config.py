@@ -8,10 +8,13 @@ from libqtile.config import Group, Screen
 from libqtile.lazy import lazy
 
 # Refactorized config files
+from functions import *
 from bars import main_bar, minimal_bar
 from keymaps import keys, mouse
 from groups import groups
 
+
+# Find inspiration for logging from : https://github.com/qtile/qtile/issues/1658
 
 layouts = [
     layout.MonadTall(),
@@ -75,3 +78,4 @@ wmname = "LG3D"
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+
