@@ -25,6 +25,8 @@ set softtabstop=2
 set shiftwidth=2
 " hide buffer when abandoning
 set hidden
+"🐭 🧀 (this will be our secret). Enables mouse: resize, select, close and nav
+set mouse=a
 
 """ Visuals
 set background=light
