@@ -8,7 +8,6 @@ from libqtile.config import Group, Screen
 from libqtile.lazy import lazy
 
 # Refactorized config files
-from functions import *
 from bars import main_bar, minimal_bar
 from keymaps import keys, mouse
 from groups import groups
