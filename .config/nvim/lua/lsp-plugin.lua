@@ -9,6 +9,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
   -- buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'ga', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', '<space>d', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
@@ -46,10 +47,14 @@ end
 -- Installed as vim plugin
 require("flutter-tools").setup{
   widget_guides = {
-    enabled = false,
+    enabled = true,
   },
+  flutter_path = "/opt/flutter/bin/flutter",
   dev_log = {
     open_cmd = "tabedit"
+  },
+  experimental = {
+    lsp_derive_paths = true,
   },
   lsp = {
     on_attach = on_attach

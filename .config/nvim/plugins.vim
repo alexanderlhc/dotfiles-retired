@@ -26,6 +26,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 " Flutter Tools
 Plug 'akinsho/flutter-tools.nvim'
+" Required by flutter-tools
+Plug 'nvim-lua/plenary.nvim'
 " Snippets
 Plug 'hrsh7th/vim-vsnip'
 " https://github.com/lewis6991/gitsigns.nvim
@@ -34,5 +36,6 @@ Plug 'kosayoda/nvim-lightbulb'
 " SQL Languageserver
 " requires: 'go get github.com/lighttiger2505/sqls'
 Plug 'nanotee/sqls.nvim'
+
 
 call plug#end()
