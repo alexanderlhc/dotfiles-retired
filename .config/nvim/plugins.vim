@@ -20,8 +20,6 @@ Plug 'dart-lang/dart-vim-plugin'
 "TODO: remove if flutter-tools widget guides is functional Plug 'Yggdroot/indentLine'
 " React highlighting
 Plug 'MaxMEllon/vim-jsx-pretty'
-" Common configuration for LSP
-Plug 'neovim/nvim-lspconfig'
 " Autocomplete goodness
 Plug 'hrsh7th/nvim-compe'
 " Flutter Tools
@@ -36,6 +34,10 @@ Plug 'kosayoda/nvim-lightbulb'
 " SQL Languageserver
 " requires: 'go get github.com/lighttiger2505/sqls'
 Plug 'nanotee/sqls.nvim'
-
+""""
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'glepnir/lspsaga.nvim'
 
 call plug#end()
