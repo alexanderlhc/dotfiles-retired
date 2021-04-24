@@ -1,6 +1,16 @@
 -- Formatters
 local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
+local eslint = {
+    lintCommand = "./node_modules/.bin/eslint -f unix --stdin --stdin-filename ${INPUT}",
+    lintIgnoreExitCode = true,
+    lintStdin = true,
+    lintFormats = {"%f:%l:%c: %m"},
+    formatCommand = "./node_modules/.bin/eslint --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+    formatStdin = true
+}
+
+
 -- Format on Save
 -- source: https://www.reddit.com/r/neovim/comments/jvisg5/lets_talk_formatting_again/?utm_source=share&utm_medium=web2x&context=3
 vim.lsp.handlers["textDocument/formatting"] = function(err, _, result, _, bufnr)
@@ -30,6 +40,7 @@ require"lspconfig".efm.setup {
     cmd = {vim.fn.stdpath('data') .. "/lspinstall/efm/efm-langserver"},
     init_options = {documentFormatting = true, codeAction = false},
     on_attach = on_attach,
+    filetypes = {"html", "css", "json", "yaml", "javascript" },
     settings = {
         rootMarkers = {".git/"},
         languages = {
@@ -37,8 +48,8 @@ require"lspconfig".efm.setup {
             css = {prettier},
             json = {prettier},
             yaml = {prettier},
-            javascript = {prettier},
-            javascriptreact = {prettier},
+            javascript = {prettier, eslint},
+            -- javascriptreact = {prettier},
         }
     }
 }
