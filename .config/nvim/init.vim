@@ -59,6 +59,9 @@ set number
 
 " Load LSP Config
 lua << EOF
-require('lsp-plugin')
+require('lsp')
+require('lsp.js-ts')
+require('lsp.latex')
+require('lsp.efm')
 require('compe-plugin')
 EOF
