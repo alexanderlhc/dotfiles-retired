@@ -1,5 +1,7 @@
 vim.o.completeopt = "menu,menuone,noselect" -- required
 
+print("reading compe file")
+
 -- default configuration
 require'compe'.setup {
   enabled = true;

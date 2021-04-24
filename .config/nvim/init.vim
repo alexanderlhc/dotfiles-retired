@@ -1,9 +1,6 @@
 """ Mappings
 let mapleader=" "
 
-" Load plugins
-runtime plugins.vim
-
 """ Settings
 " scroll when reaching last 3 lines
 set scrolloff=3
@@ -57,13 +54,12 @@ set listchars+=nbsp:⦸
 " show line number
 set number
 
-set completeopt=menuone,noselect
-
 " Load LSP Config
 lua << EOF
+require('plugins')
 require('lsp')
 require('lsp.js-ts')
 require('lsp.latex')
 require('lsp.efm')
-require('compe-plugin')
+require('plugin-compe')
 EOF
