@@ -41,18 +41,13 @@ return require('packer').startup(function()
   use {'tpope/vim-commentary'}
 
   -- Autocomplete
-  use {"hrsh7th/nvim-compe", as = 'compe'}
-  use {'hrsh7th/vim-vsnip'}
-  use {'rafamadriz/friendly-snippets'}
-
-  -- use {
-  --   'hrsh7th/nvim-compe',
-  --   opt = true,
-  --   requires = {
-  --     {'hrsh7th/vim-vsnip'},
-  --     {'rafamadriz/friendly-snippets'}
-  --   }, as = 'compe'
-  -- }
+  use {
+    'hrsh7th/nvim-compe',
+    requires = {
+      {'hrsh7th/vim-vsnip'},
+      {'rafamadriz/friendly-snippets'}
+    }, as = 'compe'
+  }
 
   -- Language Server Protocol
   use {'neovim/nvim-lspconfig', 'kabouzeid/nvim-lspinstall', 'glepnir/lspsaga.nvim'}
