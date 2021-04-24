@@ -54,7 +54,6 @@ set listchars+=nbsp:⦸
 " show line number
 set number
 
-" Load LSP Config
 lua << EOF
 require('plugins')
 require('lsp')
