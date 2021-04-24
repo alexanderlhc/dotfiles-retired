@@ -1,6 +1,9 @@
 """"""
 " Vanilla
 
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+
 " ALT
 
 " Moves lines n-length in either up (k) or down (j) direction
