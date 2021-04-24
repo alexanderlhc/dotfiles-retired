@@ -1,7 +1,8 @@
+-- Formatters
 local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
-
 -- Format on Save
+-- source: https://www.reddit.com/r/neovim/comments/jvisg5/lets_talk_formatting_again/?utm_source=share&utm_medium=web2x&context=3
 vim.lsp.handlers["textDocument/formatting"] = function(err, _, result, _, bufnr)
     if err ~= nil or result == nil then
         return
@@ -26,24 +27,18 @@ local on_attach = function(client)
 end
 
 require"lspconfig".efm.setup {
-    -- init_options = {initializationOptions},
     cmd = {vim.fn.stdpath('data') .. "/lspinstall/efm/efm-langserver"},
     init_options = {documentFormatting = true, codeAction = false},
-    filetypes = {"html", "css", "json", "yaml","javascriptreact", "javascript" },
     on_attach = on_attach,
     settings = {
         rootMarkers = {".git/"},
         languages = {
-            -- javascript = tsserver_args,
-            -- javascriptreact = tsserver_args,
             html = {prettier},
             css = {prettier},
             json = {prettier},
             yaml = {prettier},
             javascript = {prettier},
             javascriptreact = {prettier},
-            -- markdown = {markdownPandocFormat}
-            -- markdown = {markdownPandocFormat, markdownlint},
         }
     }
 }
