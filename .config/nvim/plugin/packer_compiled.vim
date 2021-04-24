@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/compe"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+  },
   ["fzf.vim"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/fzf.vim"
@@ -116,6 +120,10 @@ _G.packer_plugins = {
   ["vim-surround"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 
