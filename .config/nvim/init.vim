@@ -62,5 +62,6 @@ lua << EOF
 require('lsp')
 require('lsp.js-ts')
 require('lsp.latex')
+require('lsp.efm')
 require('compe-plugin')
 EOF
