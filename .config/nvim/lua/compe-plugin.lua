@@ -16,12 +16,12 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
+    path = {kind = "  "},
+    buffer = {kind = "  "},
+    calc = {kind = "  "},
+    vsnip = {kind = "  "},
+    nvim_lsp = {kind = "  "},
+    spell = {kind = "  "},
   };
 }
 
@@ -50,6 +50,7 @@ _G.tab_complete = function()
     return vim.fn['compe#complete']()
   end
 end
+
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t "<C-p>"

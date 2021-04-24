@@ -57,6 +57,8 @@ set listchars+=nbsp:⦸
 " show line number
 set number
 
+set completeopt=menuone,noselect
+
 " Load LSP Config
 lua << EOF
 require('lsp')
