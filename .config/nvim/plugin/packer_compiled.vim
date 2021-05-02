@@ -103,6 +103,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/packer.nvim"

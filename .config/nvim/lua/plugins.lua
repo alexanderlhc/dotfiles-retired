@@ -59,7 +59,8 @@ return require('packer').startup(function()
   use {'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     requires = {
-      {'romgrk/nvim-treesitter-context'} -- provides: TSContextEnable and TSContextDisable
+      {'romgrk/nvim-treesitter-context'}, -- provides: TSContextEnable and TSContextDisable
+      {'JoosepAlviste/nvim-ts-context-commentstring'} -- set commentstring depending on context, paires well with vim-commentary
     }
   }
 

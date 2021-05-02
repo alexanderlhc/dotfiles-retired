@@ -9,4 +9,7 @@ require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
   },
+  context_commentstring = { -- specially useful hybrid files containing multiple languages
+    enable = true
+  }
 }
