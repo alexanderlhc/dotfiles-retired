@@ -95,6 +95,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/packer.nvim"

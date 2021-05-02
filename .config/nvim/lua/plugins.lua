@@ -55,4 +55,9 @@ return require('packer').startup(function()
   -- Smoother Tmux integration
   use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}
 
+  -- Treesitter
+  use {'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+
 end)
