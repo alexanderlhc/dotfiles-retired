@@ -57,7 +57,10 @@ return require('packer').startup(function()
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = ':TSUpdate',
+    requires = {
+      {'romgrk/nvim-treesitter-context'} -- provides: TSContextEnable and TSContextDisable
+    }
   }
 
 end)

@@ -99,6 +99,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/packer.nvim"
