@@ -37,7 +37,6 @@ return require('packer').startup(function()
   -- TODO: 'justinmk/vim-sneak'
 
   -- Comments toggle and filetype
-  -- TODO: find the context plugin and implement as dependency
   use {'tpope/vim-commentary'}
 
   -- Autocomplete
