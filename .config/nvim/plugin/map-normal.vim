@@ -9,6 +9,9 @@ nnoremap <expr> k (v:count > 5 ? "m'" . v:count : '') . 'k'
 
 nmap <script>s<CR> :tab drop ~/Documents/Scratchpad.txt<CR>
 
+nnoremap <leader>f :Fern -drawer -toggle .<CR>
+
+
 """"""
 " Function Keys F1-F12
 
