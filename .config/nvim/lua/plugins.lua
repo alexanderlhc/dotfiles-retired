@@ -63,4 +63,8 @@ return require('packer').startup(function()
     }
   }
 
+  -- File browser
+  use {'lambdalisue/fern.vim'}
+
+
 end)

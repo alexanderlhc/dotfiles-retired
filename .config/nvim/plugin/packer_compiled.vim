@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/compe"
   },
+  ["fern.vim"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/fern.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/friendly-snippets"
