@@ -28,6 +28,10 @@ keys = [
         desc="Move window down in current stack "),
     Key([mod, "control"], "j", lazy.layout.shuffle_up(),
         desc="Move window up in current stack "),
+    Key([mod, "shift"], "p", lazy.layout.grow(),
+        desc="Grow Window in size"),
+    Key([mod, "shift"], "m", lazy.layout.shrink(),
+        desc="Shrink Window in size"),
 
     Key([mod], "p", lazy.spawn('passmenu -fn "Inconsolata Regular"-15'),
         desc="Launches password manager"),
