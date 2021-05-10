@@ -1,0 +1,17 @@
+name: microservice
+root: ./<%= @settings["dir"] %>
+
+windows:
+  - editor: vim
+  - files: ranger
+  - logs+run:
+      layout: 5dac,239x60,0,0[239x48,0,0,2,239x11,0,49,5]
+      panes:
+        - tail -f test.log | ccze
+        - read && ./start.sh test.log
+  - docker:
+      layout: main-horizontal
+      panes:
+        - read && systemctl start docker
+        - read && docker start mariadb-dev
+  - shell: null
