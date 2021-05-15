@@ -4,6 +4,8 @@ nnoremap <Leader>x :xit<CR>
 nnoremap <Leader>q :quit<CR>
 nnoremap <Leader>qq :quit!<CR>
 
+nnoremap <leader>f :Fern -drawer -toggle .<CR>
+
 " File Management
 nnoremap <A-f> :Files<CR>
 nnoremap <A-f>g :GFiles<CR>
