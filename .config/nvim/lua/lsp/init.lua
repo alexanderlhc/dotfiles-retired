@@ -8,6 +8,7 @@ vim.cmd("nnoremap <silent><leader>ca :Lspsaga code_action<CR>")
 vim.cmd("vnoremap <silent><leader>ca :<C-U>Lspsaga range_code_action<CR>")
 vim.cmd("nnoremap <silent> K :Lspsaga hover_doc<CR>")
 vim.cmd("nnoremap <silent> <F2> :Lspsaga rename<CR>")
+vim.cmd('nnoremap <space>e <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
 
 local function documentHighlight(client, bufnr)
     -- Set autocommands conditional on server_capabilities
