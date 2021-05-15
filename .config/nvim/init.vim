@@ -61,6 +61,7 @@ require('lsp.js-ts')
 require('lsp.latex')
 require('lsp.efm')
 require('lsp.dart')
+require('lsp.flutter-tools')
 require('plugin-compe')
 require('plugin-treesitter')
 EOF
