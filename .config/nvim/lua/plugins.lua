@@ -5,6 +5,8 @@
 --       * 'akinsho/flutter-tools.nvim'
 --       * 'nvim-lua/plenary.nvim'
 --       * 'kosayoda/nvim-lightbulb'
+--       * 'hrsh7th/vim-vsnip-integ'
+--       *  'Neevash/awesome-flutter-snippets'
 
 -- Automatically add packer to "path" {{{
 local execute = vim.api.nvim_command
@@ -67,6 +69,7 @@ return require('packer').startup(function()
   -- dart
   use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'dart-lang/dart-vim-plugin' }
+
   -- File browser
   use {'lambdalisue/fern.vim'}
 
