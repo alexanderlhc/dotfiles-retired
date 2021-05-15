@@ -60,6 +60,7 @@ require('lsp')
 require('lsp.js-ts')
 require('lsp.latex')
 require('lsp.efm')
+require('lsp.dart')
 require('plugin-compe')
 require('plugin-treesitter')
 EOF
