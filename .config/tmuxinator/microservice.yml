@@ -13,5 +13,5 @@ windows:
       layout: main-horizontal
       panes:
         - read && systemctl start docker
-        - read && docker start mariadb-dev
+        - read && docker start mssql-dev
   - shell: null
