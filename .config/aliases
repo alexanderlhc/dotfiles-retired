@@ -23,4 +23,11 @@ alias rsync_cp="rsync --archive -hh --partial --info=stats1,progress2 --modify-w
 alias rsync_mv="rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files"
 
 # cd to exited dir with Ranger
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias ranger="ranger-launch"
+
+ranger-launch() {
+  # fixes the rerender, draw issue when terminal window is resized
+  COLUMNS=
+  LINES=
+  exec ranger "$@" --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"
+}
