@@ -2,14 +2,22 @@
 local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
 local eslint = {
-    lintCommand = "./node_modules/.bin/eslint -f unix --stdin --stdin-filename ${INPUT}",
-    lintIgnoreExitCode = true,
-    lintStdin = true,
-    lintFormats = {"%f:%l:%c: %m"},
-    formatCommand = "./node_modules/.bin/eslint --fix-to-stdout --stdin --stdin-filename=${INPUT}",
-    formatStdin = true
+  sourceName = "eslint",
+  command = "eslint_d",
+  rootPatterns = {".eslintrc.js", "package.json"},
+  debounce = 100,
+  args = {"--stdin", "--stdin-filename", "%filepath", "--format", "json"},
+  parseJson = {
+    errorsRoot = "[0].messages",
+    line = "line",
+    column = "column",
+    endLine = "endLine",
+    endColumn = "endColumn",
+    message = "${message} [${ruleId}]",
+    security = "severity"
+  },
+  securities = {[2] = "error", [1] = "warning"}
 }
-
 
 -- Format on Save
 -- source: https://www.reddit.com/r/neovim/comments/jvisg5/lets_talk_formatting_again/?utm_source=share&utm_medium=web2x&context=3
@@ -40,7 +48,7 @@ require"lspconfig".efm.setup {
     cmd = {vim.fn.stdpath('data') .. "/lspinstall/efm/efm-langserver"},
     init_options = {documentFormatting = true, codeAction = false},
     on_attach = on_attach,
-    filetypes = {"html", "css", "json", "yaml", "javascript" },
+    filetypes = {"html", "css", "json", "yaml", "javascript", "javascriptreact" },
     settings = {
         rootMarkers = {".git/"},
         languages = {
@@ -49,7 +57,7 @@ require"lspconfig".efm.setup {
             json = {prettier},
             yaml = {prettier},
             javascript = {prettier, eslint},
-            -- javascriptreact = {prettier},
+            javascriptreact = {prettier, eslint},
         }
     }
 }
