@@ -75,9 +75,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/compe"
   },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
+  },
   ["fern.vim"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/fern.vim"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -111,9 +119,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
   },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -129,9 +153,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
+  ["vim-github-colorscheme"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-github-colorscheme"
+  },
   ["vim-one"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-one"
+  },
+  ["vim-sneak"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-sneak"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -140,6 +172,10 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-wordmotion"] = {
+    loaded = true,
+    path = "/home/alexander/.local/share/nvim/site/pack/packer/start/vim-wordmotion"
   }
 }
 
