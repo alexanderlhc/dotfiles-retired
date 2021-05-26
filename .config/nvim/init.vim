@@ -33,7 +33,8 @@ colorscheme one
 " highlight current line
 set cursorline
 " fold based on indentation
-set foldmethod=indent
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 " folding is unfolded unless told otherwise
 set foldlevelstart=132
 " unless told otherwise end of buffer (bottom of file) ~ char is removed
@@ -54,12 +55,24 @@ set listchars+=nbsp:⦸
 " show line number
 set number
 
+function! s:init_fern() abort
+
+  nmap <buffer> v <Plug>(fern-action-open:vsplit)
+  nmap <buffer> H <Plug>(fern-action-open:split)
+
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+
 lua << EOF
 require('plugins')
 require('lsp')
+require('lsp.efm')
 require('lsp.js-ts')
 require('lsp.latex')
-require('lsp.efm')
 require('lsp.dart')
 require('lsp.flutter-tools')
 require('plugin-compe')
