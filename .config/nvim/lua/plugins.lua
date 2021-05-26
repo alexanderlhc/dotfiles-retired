@@ -26,6 +26,7 @@ return require('packer').startup(function()
 
   -- Theme
   use {'rakr/vim-one'}
+  use {'endel/vim-github-colorscheme'}
 
   -- Git
   use {'tpope/vim-fugitive'}
@@ -36,7 +37,8 @@ return require('packer').startup(function()
   -- Fuzzy Finder Magic
   use {'junegunn/fzf.vim'}
 
-  -- TODO: 'justinmk/vim-sneak'
+  -- Faster navigation
+  use {'chaoren/vim-wordmotion', {'justinmk/vim-sneak'}}
 
   -- Comments toggle and filetype
   use {'tpope/vim-commentary'}
@@ -73,5 +75,11 @@ return require('packer').startup(function()
   -- File browser
   use {'lambdalisue/fern.vim'}
 
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
 
 end)
