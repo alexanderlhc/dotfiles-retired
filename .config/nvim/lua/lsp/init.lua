@@ -9,6 +9,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     underline = true,
   }
 )
+
 vim.lsp.protocol.CompletionItemKind = {
     "   (Text) ",
     "   (Method)",
@@ -36,6 +37,8 @@ vim.lsp.protocol.CompletionItemKind = {
     "   (Operator)",
     "   (TypeParameter)"
 }
+
+
 local lsp_config = {}
 
 vim.cmd("nnoremap gD <cmd>lua vim.lsp.buf.declaration()<CR>")
