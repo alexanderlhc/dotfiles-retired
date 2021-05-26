@@ -4,7 +4,7 @@ nnoremap <Leader>x :xit<CR>
 nnoremap <Leader>q :quit<CR>
 nnoremap <Leader>qq :quit!<CR>
 
-nnoremap <leader>f :Fern -drawer -toggle .<CR>
+nnoremap <leader>f :Fern -drawer -toggle -reveal=% .<CR>
 
 " File Management
 nnoremap <A-f> :Files<CR>

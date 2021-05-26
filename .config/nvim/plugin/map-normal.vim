@@ -6,7 +6,7 @@
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : '') . 'j'
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : '') . 'k'
 
-nmap <script>s<CR> :tab drop ~/Documents/Scratchpad.txt<CR>
+"nmap <script>s<CR> :tab drop ~/Documents/Scratchpad.txt<CR>
 
 """"""
 " Function Keys F1-F12
