@@ -72,6 +72,9 @@ return require('packer').startup(function()
   use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'dart-lang/dart-vim-plugin' }
 
+  -- csharp
+  use {'OmniSharp/omnisharp-vim'}
+
   -- File browser
   use {'lambdalisue/fern.vim'}
 
